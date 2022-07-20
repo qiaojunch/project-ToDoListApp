@@ -165,11 +165,15 @@ app.get("/:customListName", function(req, res) {
 // });
 
 // make port asigned by heroku server on clould
-const port = process.env.PORT;
-if (port === NULL || ""){
+let port = process.env.PORT;
+if (port == null || port == ""){
     port = 3000;  // localhost port if not connect to the cloud
 }
 
 app.listen(port, function() {
     console.log("Server started successfully");
 });
+
+
+// website of the app
+// https://stark-fjord-18712.herokuapp.com/
